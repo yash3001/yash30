@@ -15,11 +15,11 @@ function App() {
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Works />
-        <Testimonials />
-        <Contact />
+        <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Portfolio menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Testimonials menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
     </div>
   );
