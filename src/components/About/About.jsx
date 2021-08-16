@@ -8,6 +8,7 @@ export default function About({ menuOpen, setMenuOpen }) {
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
+      backDelay: 1000,
       strings: [
         "competitive programmer.",
         "full stack developer.",
