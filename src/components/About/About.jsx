@@ -30,12 +30,12 @@ export default function About({ menuOpen, setMenuOpen }) {
       <div className="wrapper">
         <h2>Hey there, I am</h2>
         <h1>Yash Chauhan</h1>
-        <h3>CSE Student at The National Institute of Engineering, Mysore</h3>
+        <h3>CSE Student @ The National Institute of Engineering, Mysore</h3>
         <h3>
           I am a <span ref={textRef}></span>
         </h3>
       </div>
-      <a href="#portfolio">
+      <a href="#skills">
         <img src="assets/down_arrow.png" alt="" />
       </a>
     </div>
