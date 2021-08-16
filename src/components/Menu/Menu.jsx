@@ -26,7 +26,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
         </li>
         <li>
           <a href="#contact" onClick={() => setMenuOpen(!menuOpen)}>
-            Conect
+            Connect
           </a>
         </li>
       </ul>
