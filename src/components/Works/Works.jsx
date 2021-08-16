@@ -6,5 +6,5 @@ export default function Works({ menuOpen, setMenuOpen }) {
       setMenuOpen(false);
     }
   }
-  return <div className="works" id="words" onClick={check}></div>;
+  return <div className="works" id="works" onClick={check}></div>;
 }

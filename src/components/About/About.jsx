@@ -1,8 +1,8 @@
-import "./intro.scss";
+import "./about.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
 
-export default function Intro({ menuOpen, setMenuOpen }) {
+export default function About({ menuOpen, setMenuOpen }) {
   const textRef = useRef();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Intro({ menuOpen, setMenuOpen }) {
         "python developer.",
         "gnu/linux enthusiast.",
         "content creator.",
-        "valorant player.",
+        "valorant player :)",
       ],
     });
   }, []);
@@ -25,7 +25,7 @@ export default function Intro({ menuOpen, setMenuOpen }) {
     }
   }
   return (
-    <div className="intro" id="intro" onClick={check}>
+    <div className="about" id="about" onClick={check}>
       <div className="wrapper">
         <h2>Hey there, I am</h2>
         <h1>Yash Chauhan</h1>
