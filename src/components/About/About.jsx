@@ -22,7 +22,7 @@ export default function About({ menuOpen, setMenuOpen }) {
           "valorant player :)",
         ],
       });
-    }, 1000);
+    }, 1500);
   }, []);
 
   function check() {
@@ -32,7 +32,7 @@ export default function About({ menuOpen, setMenuOpen }) {
   }
   return (
     <div className="about" id="about" onClick={check}>
-      <Zoom bottom cascade>
+      <Zoom cascade>
         <div className="wrapper">
           <h2>Hey there, I am</h2>
           <h1>Yash Chauhan</h1>

@@ -3,7 +3,7 @@
 .topbar {
   width: 100%;
   height: 70px;
-  background-color: crimson;
+  background-color: #212121;
   color: white;
   position: fixed;
   top: 0;
@@ -24,8 +24,9 @@
         font-size: 40px;
         font-weight: 700;
         text-decoration: none;
-        color: inherit;
+        color: #0bceaf;
         margin-right: 40px;
+        transition: all 1s ease;
       }
 
       .itemContainer {
@@ -70,20 +71,24 @@
   }
 
   &.active {
-    background-color: $mainColor;
-    color: white;
+    background-color: #0bceaf;
+    color: black;
+
+    .wrapper .left .logo {
+      color: black;
+    }
 
     .hamburger {
       span {
         &:first-child {
-          background-color: white;
+          background-color: black;
           transform: rotate(45deg);
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:last-child {
-          background-color: white;
+          background-color: black;
           transform: rotate(-45deg);
         }
       }
