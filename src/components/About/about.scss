@@ -74,9 +74,11 @@
   a {
     position: absolute;
     bottom: 30px;
-    img {
-      width: 30px;
-      animation: arrowBlink 2s infinite;
+
+    .down-icon {
+      font-size: 40px;
+      color: black;
+      animation: arrowBlink 1.5s infinite;
     }
 
     @keyframes arrowBlink {
