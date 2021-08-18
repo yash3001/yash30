@@ -6,5 +6,9 @@ export default function Contact({ menuOpen, setMenuOpen }) {
       setMenuOpen(false);
     }
   }
-  return <div className="contact" id="contact" onClick={check}></div>;
+  return (
+    <div className="contact" id="contact" onClick={check}>
+      <h1>Coming Soon !!!</h1>
+    </div>
+  );
 }

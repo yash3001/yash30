@@ -3,8 +3,8 @@
 .topbar {
   width: 100%;
   height: 70px;
-  background-color: #0bceaf;
-  color: black;
+  background-color: crimson;
+  color: white;
   position: fixed;
   top: 0;
   z-index: 3;
@@ -22,9 +22,9 @@
 
       .logo {
         font-size: 40px;
+        color: white;
         font-weight: 700;
         text-decoration: none;
-        color: black;
         margin-right: 40px;
         transition: all 1s ease;
       }
@@ -51,6 +51,68 @@
     }
 
     .right {
+      display: flex;
+      align-items: center;
+
+      .switch {
+        margin-right: 20px;
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background-color: #212121;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
       .hamburger {
         width: 32px;
         height: 25px;
@@ -62,12 +124,50 @@
         span {
           width: 100%;
           height: 3px;
-          background-color: black;
+          background-color: white;
           transform-origin: left;
           transition: all 0.5s ease;
         }
       }
     }
+  }
+
+  &.active {
+    background-color: crimson;
+    color: white;
+
+    .wrapper .left .logo {
+      color: white;
+    }
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.topbar-dark-mode {
+  background-color: #0bceaf;
+  color: black;
+
+  .wrapper .left .logo {
+    color: black;
+  }
+
+  .wrapper .right .hamburger span {
+    background-color: black;
   }
 
   &.active {
@@ -78,20 +178,8 @@
       color: black;
     }
 
-    .hamburger {
-      span {
-        &:first-child {
-          background-color: black;
-          transform: rotate(45deg);
-        }
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        &:last-child {
-          background-color: black;
-          transform: rotate(-45deg);
-        }
-      }
+    .hamburger span {
+      color: black;
     }
   }
 }

@@ -1,9 +1,10 @@
 .about {
-  background-color: #212121;
+  background-color: white;
   display: flex;
   justify-content: space-around;
   position: relative;
-  color: whitesmoke;
+  color: black;
+  transition: all 1s ease;
 
   .wrapper {
     height: 100%;
@@ -27,7 +28,8 @@
 
       span {
         font-size: inherit;
-        color: #0bceaf;
+        transition: all 1s ease;
+        color: crimson;
       }
 
       .ityped-cursor {
@@ -75,10 +77,11 @@
   a {
     position: absolute;
     bottom: 30px;
+    transition: all 1s ease;
 
     .down-icon {
       font-size: 40px;
-      color: #0bceaf;
+      color: crimson;
       animation: arrowBlink 1.5s infinite;
     }
 
@@ -90,5 +93,17 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.about-dark-mode {
+  background-color: #212121;
+  color: whitesmoke;
+
+  .wrapper h3 span {
+    color: #0bceaf;
+  }
+  .wrapper a .down-icon {
+    color: #0bceaf;
   }
 }

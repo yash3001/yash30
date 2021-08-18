@@ -6,5 +6,9 @@ export default function Skills({ menuOpen, setMenuOpen }) {
       setMenuOpen(false);
     }
   }
-  return <div className="skills" id="skills" onClick={check}></div>;
+  return (
+    <div className="skills" id="skills" onClick={check}>
+      <h1>Coming Soon !!!</h1>
+    </div>
+  );
 }

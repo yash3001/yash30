@@ -1,9 +1,13 @@
 import "./topbar.scss";
 import { Person, Mail } from "@material-ui/icons";
 
-export default function Topbar({ menuOpen, setMenuOpen }) {
+export default function Topbar({ menuOpen, setMenuOpen, dark, setMode }) {
   return (
-    <div className={"topbar " + (menuOpen && "active")}>
+    <div
+      className={
+        " topbar " + (menuOpen && " active ") + (dark && " topbar-dark-mode ")
+      }
+    >
       <div className="wrapper">
         <div className="left">
           <a href="#about" className="logo">
@@ -19,6 +23,10 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
           </div>
         </div>
         <div className="right">
+          <label className="switch">
+            <input type="checkbox" onChange={() => setMode(!dark)} />
+            <span className="slider round"></span>
+          </label>
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>

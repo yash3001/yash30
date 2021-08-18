@@ -6,5 +6,9 @@ export default function Projects({ menuOpen, setMenuOpen }) {
       setMenuOpen(false);
     }
   }
-  return <div className="projects" id="projects" onClick={check}></div>;
+  return (
+    <div className="projects" id="projects" onClick={check}>
+      <h1>Coming Soon !!!</h1>
+    </div>
+  );
 }

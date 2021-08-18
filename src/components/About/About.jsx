@@ -5,7 +5,7 @@ import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { ExpandMoreRounded } from "@material-ui/icons";
 
-export default function About({ menuOpen, setMenuOpen }) {
+export default function About({ menuOpen, setMenuOpen, dark }) {
   const textRef = useRef();
 
   useEffect(() => {
@@ -31,7 +31,11 @@ export default function About({ menuOpen, setMenuOpen }) {
     }
   }
   return (
-    <div className="about" id="about" onClick={check}>
+    <div
+      className={"about " + (dark && " about-dark-mode ")}
+      id="about"
+      onClick={check}
+    >
       <Zoom cascade>
         <div className="wrapper">
           <h2>Hey there, I am</h2>
