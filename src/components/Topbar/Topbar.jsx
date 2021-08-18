@@ -24,7 +24,11 @@ export default function Topbar({ menuOpen, setMenuOpen, dark, setMode }) {
         </div>
         <div className="right">
           <label className="switch">
-            <input type="checkbox" onChange={() => setMode(!dark)} />
+            <input
+              type="checkbox"
+              checked={dark}
+              onChange={() => setMode(!dark)}
+            />
             <span className="slider round"></span>
           </label>
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

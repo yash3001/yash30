@@ -6,11 +6,20 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Menu from "./components/Menu/Menu";
 import "./app.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dark, setMode] = useState(false);
+
+  const getMode = () => {
+    return JSON.parse(localStorage.getItem("mode")) || false;
+  };
+
+  const [dark, setMode] = useState(getMode());
+
+  useEffect(() => {
+    localStorage.setItem("mode", JSON.stringify(dark));
+  }, [dark]);
 
   return (
     <div className="app">
