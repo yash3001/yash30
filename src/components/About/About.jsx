@@ -2,7 +2,6 @@ import "./about.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
 import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
 import { ExpandMoreRounded } from "@material-ui/icons";
 
 export default function About({ menuOpen, setMenuOpen, dark }) {
