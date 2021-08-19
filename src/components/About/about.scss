@@ -5,13 +5,60 @@
   position: relative;
   color: black;
   transition: all 0.5s ease;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  .illustration {
+    flex: 0.4;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    position: relative;
+    top: -10px;
+    animation: up-down 4s ease-in-out infinite;
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes up-down {
+      0% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .illustration {
+      display: none;
+    }
+  }
 
   .wrapper {
     height: 100%;
+    flex: 0.6;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    position: relative;
+    top: 20px;
+    margin-left: 20px;
 
     h1 {
       font-size: 60px;

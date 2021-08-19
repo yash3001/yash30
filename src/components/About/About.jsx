@@ -36,6 +36,16 @@ export default function About({ menuOpen, setMenuOpen, dark }) {
       onClick={check}
     >
       <Zoom cascade>
+        <div className="illustration">
+          <img
+            src={
+              dark
+                ? require("./assets/coding_dark.png").default
+                : require("./assets/coding_light.png").default
+            }
+            alt="illustration"
+          />
+        </div>
         <div className="wrapper">
           <h2>Hey there, I am</h2>
           <h1>Yash Chauhan</h1>
@@ -46,7 +56,10 @@ export default function About({ menuOpen, setMenuOpen, dark }) {
         </div>
       </Zoom>
       <a href="#skills">
-        <ExpandMoreRounded className="down-icon" />
+        <ExpandMoreRounded
+          className="down-icon"
+          style={{ color: dark ? "#0bceaf" : "crimson" }}
+        />
       </a>
     </div>
   );
