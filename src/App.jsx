@@ -22,7 +22,7 @@ function App() {
   }, [dark]);
 
   return (
-    <div className="app">
+    <div className={"app " + (dark && " app-dark-mode ")}>
       <Topbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
@@ -32,10 +32,10 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
       <div className="sections">
         <About menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-        <Skills menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Projects menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Skills menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
+        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
+        <Projects menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
+        <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
       </div>
     </div>
   );
