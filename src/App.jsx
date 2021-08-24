@@ -33,8 +33,8 @@ function App() {
       <div className="sections">
         <About menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
         <Skills menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
         <Projects menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
+        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
         <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
       </div>
     </div>
