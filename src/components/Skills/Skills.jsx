@@ -1,5 +1,6 @@
 import "./skills.scss";
 import Item from "./Item";
+import Button from "../Button/Button";
 
 export default function Skills({ menuOpen, setMenuOpen, dark }) {
   function check() {
@@ -64,6 +65,11 @@ export default function Skills({ menuOpen, setMenuOpen, dark }) {
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
         />
       </div>
+      <Button
+        dark={dark}
+        text="Download Resume"
+        link="https://drive.google.com/file/d/1GbLAK-V9oxYhg939tjUUn8hv7_ThtCZl/view?usp=sharing"
+      />
     </div>
   );
 }
