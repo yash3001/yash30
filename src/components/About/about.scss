@@ -19,6 +19,7 @@
     position: relative;
     top: -10px;
     animation: up-down 4s ease-in-out infinite;
+    text-align: center;
 
     @keyframes fade-in {
       0% {
@@ -42,7 +43,8 @@
     }
 
     img {
-      width: 100%;
+      // display: inline-block;
+      width: 85%;
     }
   }
 
