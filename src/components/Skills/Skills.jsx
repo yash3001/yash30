@@ -68,7 +68,7 @@ export default function Skills({ menuOpen, setMenuOpen, dark }) {
       <Button
         dark={dark}
         text="Download Resume"
-        link="https://drive.google.com/file/d/1GbLAK-V9oxYhg939tjUUn8hv7_ThtCZl/view?usp=sharing"
+        // link="https://drive.google.com/file/d/1GbLAK-V9oxYhg939tjUUn8hv7_ThtCZl/view?usp=sharing"
       />
     </div>
   );
