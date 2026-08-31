@@ -13,12 +13,11 @@ export default function About({ menuOpen, setMenuOpen, dark }) {
         showCursor: true,
         backDelay: 1000,
         strings: [
+          "systems software engineer.",
+          "c/c++ developer.",
+          "networking & security engineer.",
           "competitive programmer.",
-          "full stack developer.",
-          "python developer.",
           "gnu/linux enthusiast.",
-          "content creator.",
-          "valorant player :)",
         ],
       });
     }, 1500);
@@ -49,7 +48,7 @@ export default function About({ menuOpen, setMenuOpen, dark }) {
         <div className="wrapper">
           <h2>Hey there, I am</h2>
           <h1>Yash Chauhan</h1>
-          <h3>CSE Student @ The National Institute of Engineering, Mysore</h3>
+          <h3>Staff Software Engineer @ National Instruments</h3>
           <h3>
             I am a <span ref={textRef}></span>
           </h3>

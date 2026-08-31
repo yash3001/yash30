@@ -20,55 +20,50 @@ export default function Skills({ menuOpen, setMenuOpen, dark }) {
       </div>
       <div className="skills-container">
         <Item
-          name="Competitive Programming"
-          image_link="./assets/competitive_programming_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          name="C / C++"
+          image_link="./assets/c++_logo.png"
+          description="My primary languages for systems work. I build reactor-based TCP networking, OpenSSL/TLS 1.3 socket layers, and high-performance caches inside LabVIEW's C++ codebase."
         />
         <Item
-          name="C++/C"
-          image_link="./assets/c++_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          name="Networking & Security"
+          image_link="./assets/linux_logo.png"
+          description="gRPC, TCP/IP, UDP and socket programming with Protobuf serialization, secured with mutual TLS 1.3, OpenSSL, X.509 certificates and modern cryptography (RSA, SHA-256/512)."
+        />
+        <Item
+          name="Systems & Multithreading"
+          image_link="./assets/git_logo.png"
+          description="Concurrent, cross-platform systems using mutexes, semaphores and condition variables — from IOCP/inotify filesystem monitoring to multithreaded event-processing pipelines on Linux and Windows."
         />
         <Item
           name="Python"
           image_link="./assets/python_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          description="My go-to for tooling and automation — testing frameworks that validate gRPC servers and clients, plus automation bots built with Selenium and threading."
         />
         <Item
-          name="React Js"
+          name="React / Node.js"
           image_link="./assets/react_logo.svg"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
-        />
-        <Item
-          name="Machine Learning"
-          image_link="./assets/machine_learning_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
-        />
-        <Item
-          name="Linux"
-          image_link="./assets/linux_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          description="Full-stack web development with React, Node.js and Express.js backed by SQL and MongoDB — including this portfolio."
         />
         <Item
           name="JavaScript"
           image_link="./assets/javascript_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          description="The language behind my web work, powering interactive, component-driven front-ends and Node.js services."
         />
         <Item
-          name="HTML/CSS"
-          image_link="./assets/html_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          name="Competitive Programming"
+          image_link="./assets/competitive_programming_logo.png"
+          description="ICPC Amritapuri Regionals qualifier (AIR 487) and a top-100 finisher across multiple national contests — algorithms and data structures are second nature."
         />
         <Item
-          name="Git"
-          image_link="./assets/git_logo.png"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi corporis ab porro. Dignissimos, autem velit. Praesentium quas exercitationem commodi error voluptatem eveniet non, voluptas cum fugiat necessitatibus laudantium fuga!"
+          name="Linux & Shell"
+          image_link="./assets/machine_learning_logo.png"
+          description="Daily driver for development. Comfortable with shell programming, cross-platform builds and the low-level details of Linux systems."
         />
       </div>
       <Button
         dark={dark}
         text="Download Resume"
-        // link="https://drive.google.com/file/d/1GbLAK-V9oxYhg939tjUUn8hv7_ThtCZl/view?usp=sharing"
+        link="https://drive.google.com/file/d/1GbLAK-V9oxYhg939tjUUn8hv7_ThtCZl/view?usp=sharing"
       />
     </div>
   );

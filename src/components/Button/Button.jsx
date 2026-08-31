@@ -7,8 +7,8 @@ export default function Button({ dark, link, text }) {
       <a
         href={link}
         target="_blank"
+        rel="noopener noreferrer"
         className={`button ${dark ? "button--dark" : ""}`}
-        onClick="location.href = 'www.google.com'"
       >
         {text}
       </a>
