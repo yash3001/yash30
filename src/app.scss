@@ -1,26 +1,17 @@
+@import "./global.scss";
+
 .app {
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+  background-size: 44px 44px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 
   .sections {
-    width: 100%;
-    height: calc(100vh - 70px);
     position: relative;
-    top: 70px;
-    scroll-behavior: smooth;
-    // scroll-snap-type: y mandatory;
-    // scrollbar-width: none; // for firefox
-    // &::-webkit-scrollbar {
-    //   display: none;
-    // } // for other browsers
-
-    > * {
-      width: 100vw;
-      height: calc(100vh - 70px);
-      // scroll-snap-align: start;
-    }
-
-    .skills {
-      height: auto;
-    }
+    z-index: 1;
   }
 }

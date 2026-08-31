@@ -1,10 +1,12 @@
 import Topbar from "./components/Topbar/Topbar";
 import About from "./components/About/About";
+import Stats from "./components/Stats/Stats";
 import Skills from "./components/Skills/Skills";
 import Works from "./components/Works/Works";
 import Projects from "./components/Projects/Projects";
+import Achievements from "./components/Achievements/Achievements";
+import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
-import Menu from "./components/Menu/Menu";
 import "./app.scss";
 import { useState, useEffect } from "react";
 
@@ -12,31 +14,40 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const getMode = () => {
-    return JSON.parse(localStorage.getItem("mode")) || false;
+    const stored = localStorage.getItem("mode");
+    return stored === null ? false : JSON.parse(stored);
   };
 
   const [dark, setMode] = useState(getMode());
 
   useEffect(() => {
     localStorage.setItem("mode", JSON.stringify(dark));
+    document.body.classList.toggle("theme-dark", dark);
+    document.body.classList.toggle("theme-light", !dark);
   }, [dark]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }, [menuOpen]);
+
   return (
-    <div className={"app " + (dark && " app-dark-mode ")}>
+    <div className={"app " + (dark ? "theme-dark" : "theme-light")}>
       <Topbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         dark={dark}
         setMode={setMode}
       />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-      <div className="sections">
-        <About menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-        <Skills menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-        <Projects menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-        <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} />
-      </div>
+      <main className="sections">
+        <About dark={dark} />
+        <Stats />
+        <Skills />
+        <Works />
+        <Projects />
+        <Achievements />
+        <Education />
+        <Contact />
+      </main>
     </div>
   );
 }
